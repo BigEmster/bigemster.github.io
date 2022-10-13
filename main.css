@@ -1,0 +1,18 @@
+body {
+    background-color: darkslategray;
+    color: beige;
+    font-family: Mojang, 'Arial Rounded MT', sans-serif;
+    padding-top: 5px;
+}
+h1, h2, h3, h4, h5, h6, .center {
+    text-align: center;
+}
+div {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-image: url(https://ffwallpaper.com/thumb/yellow-aesthetic/yellow-aesthetic-25.png);
+    width: 440px;
+    height: 290px;
+    margin-left: 34.75%;
+}
