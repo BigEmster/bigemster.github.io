@@ -17,3 +17,6 @@ div {
     height: 290px;
     margin: auto;
 }
+#rightalign {
+    margin-left: auto;
+}
