@@ -4,6 +4,7 @@
     <title>Client Error | BigEmster</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body>
     <h1>404 Not Found</h1>
@@ -14,14 +15,14 @@
       <button type="button" class="btn btn-success" onClick="url()">I got here by typing a url</button>
     </div>
     <footer>
-      <p>Page ver. 1.0.6</p>
+      <p>Page ver. 1.0.7</p>
     </footer>
     <script>
       function link() {
         document.getElementById("troubleshooting").innerHTML = "<p>Your link was most likely bad. Please send an email report <a href='mailto:emerychiang@outlook.com?subject=Bad link (github page)'>here</a> or to emerychiang@outlook.com";
       }
       function url() {
-        document.getElementById("troubleshooting").innerHTML = "<p>You most likely misspelled your url. If there are no spelling errors, the page may have been moved, or deleted. For more information please contact me <a href='mailto:emerychiang@outlook.com?subject=Missing page (github site)'>here</a> or email emerychiang@outlook.com</p>";
+        document.getElementById("troubleshooting").innerHTML = "<p>You most likely misspelled your url. If there are no spelling errors the page may have been moved, or deleted. For more information please contact me <a href='mailto:emerychiang@outlook.com?subject=Missing page (github site)'>here</a> or send an email to emerychiang@outlook.com</p>";
       }
     </script>
   </body>
