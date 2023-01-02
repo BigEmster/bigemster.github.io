@@ -7,7 +7,7 @@ body {
 h1, h2, h3, h4, h5, h6, .center {
     text-align: center;
 }
-div {
+div.happy {
     padding: 10px;
     border: 2px solid black;
     border-radius: 12px;
