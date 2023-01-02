@@ -14,11 +14,14 @@
       <button type="button" class="btn btn-success" onClick="url()">I got here by typing a url</button>
     </div>
     <footer>
-      <p>Page ver. 1.0.5</p>
+      <p>Page ver. 1.0.6</p>
     </footer>
     <script>
       function link() {
-        document.getElementById("troubleshooting").innerHTML = "<p>Your link was most likely bad. Please submit a report <a href='mailto:emerychiang@outlook.com?subject=Bad%20link%20(github%20page)'>here</a>";
+        document.getElementById("troubleshooting").innerHTML = "<p>Your link was most likely bad. Please send an email report <a href='mailto:emerychiang@outlook.com?subject=Bad link (github page)'>here</a> or to emerychiang@outlook.com";
+      }
+      function url() {
+        document.getElementById("troubleshooting").innerHTML = "<p>You most likely misspelled your url. If there are no spelling errors, the page may have been moved, or deleted. For more information please contact me <a href='mailto:emerychiang@outlook.com?subject=Missing page (github site)'>here</a> or email emerychiang@outlook.com</p>";
       }
     </script>
   </body>
