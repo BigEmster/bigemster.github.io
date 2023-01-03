@@ -15,7 +15,7 @@
       <button class="btn btn-success" onClick="cacheNickname()">Log in</button>
     </form>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.11</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.10</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
     </footer>
     <script>
       function cacheNickname() {
@@ -23,6 +23,7 @@
         if (user != "" && user != null) {
           setCookie("username", user, 365);
         }
+        document.getElementById("username").value = "";
       }
       function setCookie(cname, cvalue, exdays) {
         const d = new Date();
