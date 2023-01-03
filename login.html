@@ -7,29 +7,23 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1 id="header" onLoad="pullNickname()">Login</h1>
+    <h1 id="header" onLoad="checkCookie()">Login</h1>
     <hr>
     <form class="out center">
       <input type="text" placeholder="Username or Email" id="username"><br>
       <input type="password" placeholder="Password"><br>
       <button class="btn btn-success" onClick="cacheNickname()">Log in</button>
     </form>
-    <button class="btn btn-warning" onClick="asdf()">Create alert</button>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.9</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.10</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
     </footer>
     <script>
       function cacheNickname() {
-        document.cookie = "nick=" + document.getElementById("username").value;
-        document.getElementById("username").value = "";
-      }
-      function asdf() {
-        window.alert("test alert");
-      }
-      function pullNickname() {
-        if (document.cookie != "") {
-          document.getElementById("header").innerHTML = "Welcome back, " + document.cookie + "!";
+        user = document.getElementById("username").value;
+        if (user != "" && user != null) {
+          setCookie("username", user, 365);
         }
+        document.getElementById("username").value = "";
       }
       function setCookie(cname, cvalue, exdays) {
         const d = new Date();
@@ -52,14 +46,8 @@
         return "";
       }
       function checkCookie() {
-        let user = getCookie("username");
         if (user != "") {
-          alert("Welcome again " + user);
-        } else {
-          user = prompt("Please enter your name:", "");
-          if (user != "" && user != null) {
-            setCookie("username", user, 365);
-          }
+          document.getElementById("header").innerHTML = ("Welcome back, " + user + "!");
         }
       }
     </script>
