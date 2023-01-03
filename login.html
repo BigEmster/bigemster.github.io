@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>Login</h1>
+    <h1 id="header">Login</h1>
     <hr>
     <form class="out center">
-      <input type="email" placeholder="Username or Email">test</input>
-      <input type="password" placeholder="Password">test</input>
-      <input type="submit" class="btn btn-primary">Log in</input>
+      <input type="email" placeholder="Username or Email" id="username"><br>
+      <input type="password" placeholder="Password"><br>
+      <input type="submit" class="btn btn-success" value="Log in" onClick="fakeLogin()">
     </form>
+    <button class="btn btn-warning" onClick="alert()">Create alert</button>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.1</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.2</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
     </footer>
     <script>
-      
+      function fakeLogin() {
+        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value;
+      }
+      function alert() {
+        window.alert("test alert");
+      }
     </script>
   </body>
 </html>
