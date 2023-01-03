@@ -7,25 +7,28 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1 id="header">Login</h1>
+    <h1 id="header" onLoad="pullNickname()">Login</h1>
     <hr>
     <form class="out center">
       <input type="text" placeholder="Username or Email" id="username"><br>
       <input type="password" placeholder="Password"><br>
-      <button class="btn btn-success" onClick="fakeLogin()">Log in</button>
+      <button class="btn btn-success" onClick="cacheNickname()">Log in</button>
     </form>
     <button class="btn btn-warning" onClick="asdf()">Create alert</button>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.6</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.7</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
     </footer>
     <script>
-      function fakeLogin() {
-        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
+      function cacheNickname() {
+        document.cookie = document.getElementById("username").value;
         document.getElementById("username").value = "";
       }
       function asdf() {
         window.alert("test alert");
       }
+      function pullNickname() {
+        if (document.cookie != "") {
+          document.getElementById("header").innerHTML = "Welcome back, " + document.cookie + "!"
     </script>
   </body>
 </html>
