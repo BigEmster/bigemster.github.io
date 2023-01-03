@@ -17,6 +17,9 @@ div.happy {
     height: 290px;
     margin: auto;
 }
+.out {
+    margin: 5px;
+}
 #rightalign {
     margin-left: auto;
 }
