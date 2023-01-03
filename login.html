@@ -16,7 +16,7 @@
     </form>
     <button class="btn btn-warning" onClick="asdf()">Create alert</button>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.7</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.8</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
     </footer>
     <script>
       function cacheNickname() {
@@ -28,7 +28,9 @@
       }
       function pullNickname() {
         if (document.cookie != "") {
-          document.getElementById("header").innerHTML = "Welcome back, " + document.cookie + "!"
+          document.getElementById("header").innerHTML = "Welcome back, " + document.cookie + "!";
+        }
+      }
     </script>
   </body>
 </html>
