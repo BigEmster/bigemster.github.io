@@ -7,48 +7,24 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1 id="header" onLoad="checkCookie()">Login</h1>
+    <h1 id="header">Login</h1>
     <hr>
     <form class="out center">
       <input type="text" placeholder="Username or Email" id="username"><br>
       <input type="password" placeholder="Password"><br>
-      <button class="btn btn-success" onClick="cacheNickname()" type="button">Log in</button>
-    </form>
-    <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.11</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
-    </footer>
-    <script>
-      function cacheNickname() {
-        user = document.getElementById("username").value;
-        if (user != "" && user != null) {
-          setCookie("username", user, 365);
-        }
+      <button class="btn btn-success" onClick="fakeLogin()">Log in</button>
+     </form>
+     <button class="btn btn-warning" onClick="asdf()">Create alert</button>
+     <footer>
+       <p style="float:left; margin-left:5px;">Page ver. 1.0.6</p><p style="float:right; margin-right:5px;"><a href="/template">Reload page</a></p></div>
+     </footer>
+     <script>
+       function fakeLogin() {
+        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
         document.getElementById("username").value = "";
       }
-      function setCookie(cname, cvalue, exdays) {
-        const d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        let expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
-      function getCookie(cname) {
-        let name = cname + "=";
-        let ca = document.cookie.split(';');
-        for(let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-      function checkCookie() {
-        if (user != "") {
-          document.getElementById("header").innerHTML = ("Welcome back, " + user + "!");
-        }
+      function asdf() {
+        window.alert("test alert");
       }
     </script>
   </body>
