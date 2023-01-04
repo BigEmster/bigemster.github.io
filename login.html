@@ -16,12 +16,12 @@
     </form>
     <span class="center"><button class="btn btn-warning" onClick="showCookies()" type="button">Display cookies</button></span>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.9</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.10</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
     </footer>
     <script>
       function fakeLogin() {
         document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
-        document.cookie = "nick=" + document.getElementById("username").value;
+        document.cookie = document.getElementById("username").value;
         document.getElementById("username").value = "";
       }
       function showCookies() {
