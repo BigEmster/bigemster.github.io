@@ -10,20 +10,22 @@
     <h1 id="header">Login</h1>
     <hr>
     <form class="out center">
-      <input type="text" placeholder="Username or Email" id="username"><br>
+      <input type="text" placeholder="Username" id="username"><br>
       <input type="password" placeholder="Password"><br>
       <button class="btn btn-success" onClick="fakeLogin()" type="button">Log in</button>
     </form>
+    <span class="center"><button class="btn btn-warning" onClick="showCookies()" type="button"></span>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.7</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.8</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p></div>
     </footer>
     <script>
       function fakeLogin() {
         document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
+        document.cookie = "nick=" + document.getElementById("username").value;
         document.getElementById("username").value = "";
       }
-      function asdf() {
-        window.alert("test alert");
+      function showCookies() {
+        window.alert(document.cookie);
       }
     </script>
   </body>
