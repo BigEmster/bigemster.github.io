@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1 id="header">Login</h1>
+    <h1 id="header" onLoad="checkForNick()">Login</h1>
     <hr>
     <form class="out center">
       <input type="text" placeholder="Username" id="username"><br>
       <input type="password" placeholder="Password"><br>
-      <button class="btn btn-success" onClick="fakeLogin()" type="button">Log in</button>
+      <button class="btn btn-success" onClick="fakeLogin(document.getElementById('username').value)" type="button">Log in</button>
     </form>
     <span class="center"><button class="btn btn-warning" onClick="showCookies()" type="button">Display cookies</button></span>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.12</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.13</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
     </footer>
     <script>
-      function fakeLogin() {
-        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
+      function checkForNick() {
+        if (getCookie("nick") != "") {
+          fakeLogin(getCookie("nick"));
+        }
+      }
+      function fakeLogin(nick) {
+        document.getElementById("header").innerHTML = "Welcome back, " + nick + "!";
         document.cookie = "nick=" + document.getElementById("username").value;
         document.getElementById("username").value = "";
       }
