@@ -6,46 +6,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
   </head>
-  <body onload="checkForNick()">
-    <h1 id="header">Login</h1>
+  <body>
+    <h1>Log<span class="dependsOnNick">ged </span>in <span class="dependsOnNick">as </span><span class="nick"></span></h1>
     <hr>
     <form class="out center">
-      <input type="text" placeholder="Username" id="username"><br>
-      <input type="password" placeholder="Password"><br>
+      <input type="text" placeholder="Nickname" id="nickBox"><br>
       <button class="btn btn-success" onclick="login()" type="button">Log in</button>
     </form>
-    <span class="center"><button class="btn btn-warning" onclick="showCookies()" type="button">Display cookies</button></span>
+    <span class="center"><button class="btn btn-warning" onclick="showCookies()" type="button">Display all cookies</button></span>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.16</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
+      <p style="float:left; margin-left:5px;">Page ver. 1.1.0</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
     </footer>
+    <script src="/main.js"></script>
     <script>
-      function checkForNick() {
-        if (getCookie("nick") != "") {
-          document.getElementById("header").innerHTML = "Welcome back, " + getCookie("nick") + "!";
-        }
-      }
       function login() {
-        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
-        document.cookie = "nick=" + document.getElementById("username").value;
-        document.getElementById("username").value = "";
+        document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("nickBox").value + "!";
+        document.cookie = "nick=" + document.getElementById("nickBox").value;
+        document.getElementById("nickBox").value = "";
       }
       function showCookies() {
         window.alert(document.cookie);
-      }
-      function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
       }
     </script>
   </body>
