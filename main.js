@@ -1,6 +1,7 @@
 function checkLoggedIn() {
   if (getCookie("nick") != "") {
     document.getElementsByClassName("nick").innerHTML = getCookie("nick");
+    document.getElementsByClassName("dependsOnNoNick").style.display = "none";
   } else {
     document.getElementsByClassName("dependsOnNick").style.display = "none";
   }
