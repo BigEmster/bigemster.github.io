@@ -12,11 +12,11 @@
     <form class="out center">
       <input type="text" placeholder="Username" id="username"><br>
       <input type="password" placeholder="Password"><br>
-      <button class="btn btn-success" onclick="fakeLogin()" type="button">Log in</button>
+      <button class="btn btn-success" onclick="login()" type="button">Log in</button>
     </form>
     <span class="center"><button class="btn btn-warning" onclick="showCookies()" type="button">Display cookies</button></span>
     <footer>
-      <p style="float:left; margin-left:5px;">Page ver. 1.0.15</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
+      <p style="float:left; margin-left:5px;">Page ver. 1.0.16</p><p style="float:right; margin-right:5px;"><a href="/login">Reload page</a></p>
     </footer>
     <script>
       function checkForNick() {
@@ -24,7 +24,7 @@
           document.getElementById("header").innerHTML = "Welcome back, " + getCookie("nick") + "!";
         }
       }
-      function fakeLogin() {
+      function login() {
         document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("username").value + "!";
         document.cookie = "nick=" + document.getElementById("username").value;
         document.getElementById("username").value = "";
