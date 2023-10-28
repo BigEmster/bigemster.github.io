@@ -23,3 +23,6 @@ div.happy {
 .right {
     text-align: right;
 }
+a {
+    text-decoration: none;
+}
