@@ -31,7 +31,6 @@ function checkCookie() {
   }
 }
 function checkLoggedIn() {
-  window.alert("checking for nickname...");
   if (getCookie("nick") != "") {
     var elems = document.getElementsByClassName("nick");
     for (var i = 0; i < elems.length; i += 1) {
@@ -41,12 +40,10 @@ function checkLoggedIn() {
     for (var i = 0; i < elems.length; i += 1) {
       elems[i].style.display = "none";
     }
-    window.alert("nickname detected!");
   } else {
     var elems = document.getElementsByClassName("dependsOnNick");
     for (var i = 0; i < elems.length; i += 1) {
       elems[i].style.display = "none";
     }
-    window.alert("no nickname detected");
   }
 }
