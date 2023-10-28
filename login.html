@@ -13,9 +13,12 @@
       <input type="text" placeholder="Nickname" id="nickBox"><br>
       <button class="btn btn-success" onclick="login()" type="button">Log in</button>
     </form>
-    <span class="center"><button class="btn btn-warning" onclick="showCookies()" type="button">Display all cookies</button></span>
+    <span class="center">
+      <button class="btn btn-warning" onclick="showCookies()" type="button">Display all cookies</button>
+      <button class="btn btn-info-emphasis" onclick="showNick()" type="button">Display nickname cookie</button>
+    </span>
     <footer>
-      <p class="right">Page ver. 1.1.5</p>
+      <p class="right">Page ver. 1.1.6</p>
     </footer>
     <script type="text/javascript" src="/main.js"></script>
     <script>
@@ -26,6 +29,9 @@
       }
       function showCookies() {
         window.alert(document.cookie);
+      }
+      function showNick() {
+        window.alert(getCookie("nick"));
       }
     </script>
   </body>
