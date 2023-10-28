@@ -31,10 +31,13 @@ function checkCookie() {
   }
 }
 function checkLoggedIn() {
+  window.alert("checking for nickname...");
   if (getCookie("nick") != "") {
     document.getElementsByClassName("nick").innerHTML = getCookie("nick");
     document.getElementsByClassName("dependsOnNoNick").style.display = "none";
+    window.alert("no nickname detected");
   } else {
     document.getElementsByClassName("dependsOnNick").style.display = "none";
+    window.alert("nickname detected");
   }
 }
