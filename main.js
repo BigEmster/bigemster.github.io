@@ -33,12 +33,20 @@ function checkCookie() {
 function checkLoggedIn() {
   window.alert("checking for nickname...");
   if (getCookie("nick") != "") {
-    document.getElementsByClassName("nick").innerHTML = getCookie("nick");
-    cssStyle(document.getElementById("dependsOnNoNick"), {display: none});
-    // document.getElementsByClassName("dependsOnNoNick").style.display = "none";
+    var elems = document.getElementsByClassName("nick");
+    for (var i = 0; i < elems.length; i += 1) {
+      elems[i].innerHTML = getCookie("nick");
+    }
+    var elems = document.getElementsByClassName("dependsOnNoNick");
+    for (var i = 0; i < elems.length; i += 1) {
+      elems[i].style.display = "none";
+    }
     window.alert("nickname detected!");
   } else {
-    document.getElementsByClassName("dependsOnNick").style.display = "none";
+    var elems = document.getElementsByClassName("dependsOnNick");
+    for (var i = 0; i < elems.length; i += 1) {
+      elems[i].style.display = "none";
+    }
     window.alert("no nickname detected");
   }
 }
