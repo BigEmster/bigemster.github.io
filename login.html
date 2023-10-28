@@ -15,13 +15,13 @@
     </form>
     <span class="center"><button class="btn btn-warning" onclick="showCookies()" type="button">Display all cookies</button></span>
     <footer>
-      <p class="right">Page ver. 1.1.4</p>
+      <p class="right">Page ver. 1.1.5</p>
     </footer>
     <script type="text/javascript" src="/main.js"></script>
     <script>
       function login() {
         document.getElementById("header").innerHTML = "Welcome back, " + document.getElementById("nickBox").value + "!";
-        document.cookie = "nick=" + document.getElementById("nickBox").value;
+        setCookie("nick", document.getElementById("nickBox").value, 30);
         document.getElementById("nickBox").value = "";
       }
       function showCookies() {
