@@ -2,7 +2,7 @@ body {
     background-color: darkslategray;
     color: beige;
     font-family: Mojang, 'Arial Rounded MT', sans-serif;
-    padding-top: 5px;
+    margin: 5px;
 }
 h1, h2, h3, h4, h5, h6, .center {
     text-align: center;
@@ -18,7 +18,7 @@ div.happy {
     margin: auto;
 }
 .out {
-    margin: 5px;
+    
 }
 #rightalign {
     margin-left: auto;
