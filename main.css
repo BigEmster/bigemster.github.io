@@ -20,3 +20,6 @@ div.happy {
 #rightalign {
     margin-left: auto;
 }
+.right {
+    text-align: right;
+}
