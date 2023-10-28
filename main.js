@@ -1,11 +1,3 @@
-function checkLoggedIn() {
-  if (getCookie("nick") != "") {
-    document.getElementsByClassName("nick").innerHTML = getCookie("nick");
-    document.getElementsByClassName("dependsOnNoNick").style.display = "none";
-  } else {
-    document.getElementsByClassName("dependsOnNick").style.display = "none";
-  }
-}
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -20,4 +12,12 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+function checkLoggedIn() {
+  if (getCookie("nick") != "") {
+    document.getElementsByClassName("nick").innerHTML = getCookie("nick");
+    document.getElementsByClassName("dependsOnNoNick").style.display = "none";
+  } else {
+    document.getElementsByClassName("dependsOnNick").style.display = "none";
+  }
 }
